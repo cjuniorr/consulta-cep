@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
-
+<html ng-app="ConsultaCEP">
 <head>
     <meta charset="utf-8">
     <title>Consulta de CEP</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/consultaCEPCtrl.js" charset="utf-8"></script>
 </head>
 
-<body>
-
+<body ng-controller="consultaCEPCtrl">
     <fieldset>
         <legend>Consultar CEP</legend>
-        <form class="" id="form" action="index.html" method="post">
-            <input type="text" placeholder="Digite o CEP..." name="name" value="">
-        </form>
-        <button type="button" name="button">Consultar</button>
+        <!-- <form class="" id="form" action="index.html" method="post"> -->
+            <input type="text" id="texCep" placeholder="Digite o CEP..." name="name" value="">
+        <!--</form> -->
+        <button type="button" id="btnConsultar" name="button">Consultar</button>
     </fieldset>
 
     <div class="conteudoEndereco">
@@ -34,6 +34,4 @@
         </ul>
     </div>
 </body>
-<script src="js/consulta.js" charset="utf-8"></script>
-
 </html>
