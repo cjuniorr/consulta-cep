@@ -1,37 +1,41 @@
 <!DOCTYPE html>
-<html ng-app="ConsultaCEP">
+<html>
+
 <head>
     <meta charset="utf-8">
     <title>Consulta de CEP</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/consultaCEPCtrl.js" charset="utf-8"></script>
+    <!-- <script src="js/consultaCEPCtrl.js" charset="utf-8"></script>-->
+    <script src="js/consultaCep.js" charset="utf-8"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
-<body ng-controller="consultaCEPCtrl">
-    <fieldset>
-        <legend>Consultar CEP</legend>
-        <!-- <form class="" id="form" action="index.html" method="post"> -->
-            <input type="text" id="texCep" placeholder="Digite o CEP..." name="name" value="">
-        <!--</form> -->
-        <button type="button" id="btnConsultar" name="button">Consultar</button>
-    </fieldset>
-
-    <div class="conteudoEndereco">
-        <ul class="listaLogradouro">
-            <li><label>Rua: </label></li>
-            <li><label>Bairro: </label></li>
-            <li><label>Cidade: </label></li>
-            <li><label>Estado: </label></li>
-            <li><label>CEP: </label></li>
-        </ul>
-        <ul class="listaLabels">
-            <li><label id="txtRua"></label></li>
-            <li><label id="txtBairro"></label></li>
-            <li><label id="txtCidade"></label></li>
-            <li><label id="txtEstado"></label></li>
-            <li><label id="txtCEP"></label></li>
-        </ul>
+<body>
+    <div class="jumbotron">
+        <div class="divConsultar">
+            <legend>Consultar CEP</legend>
+            <!-- <form class="" id="form" action="index.html" method="post"> -->
+            <input type="text" id="texCep" value="" placeholder="Digite o CEP...">
+            <!--</form> -->
+            <button class="btn btn-primary" type="button" id="btnConsultar" name="button">Consultar</button>
+        </div>
+        <div class="divEndereco" id="divEndereco">
+            <ul class="listaLabels">
+                <li><label>Endereço: </label> <label id="txtRua"></label></li>
+                <li><label>Bairro: </label> <label id="txtBairro"></label></li>
+                <li><label>Cidade: </label> <label id="txtCidade"></label></li>
+                <li><label>Estado: </label> <label id="txtEstado"></label></li>
+                <li><label>CEP: </label> <label id="txtCEP"></label></li>
+            </ul>
+        </div>
     </div>
 </body>
+
 </html>

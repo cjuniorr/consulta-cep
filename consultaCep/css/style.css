@@ -1,0 +1,29 @@
+body {
+    margin: auto;
+    padding-top: 50px;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(222, 221, 221);
+}
+
+li {
+    list-style-type: none;
+}
+
+.jumbotron {
+  border-style: solid;
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    border-color: rgb(34, 126, 200);
+}
+
+.divConsultar {
+    margin-bottom: 15px;
+}
+
+.conteudoEndereco {}
+
+.listaLabels {
+    padding-left: 0px;
+}
