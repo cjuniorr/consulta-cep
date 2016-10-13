@@ -15,6 +15,7 @@
     <!-- <script src="js/consultaCEPCtrl.js" charset="utf-8"></script>-->
     <script src="js/consultaCep.js" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 </head>
 
 <body>
@@ -22,9 +23,9 @@
         <div class="divConsultar">
             <legend>Consultar CEP</legend>
             <!-- <form class="" id="form" action="index.html" method="post"> -->
-            <input type="text" id="texCep" value="" placeholder="Digite o CEP...">
+            <input type="text" id="texCep" value=""  placeholder="Digite o CEP...">
             <!--</form> -->
-            <button class="btn btn-primary" type="button" id="btnConsultar" name="button">Consultar</button>
+            <button class="btn btn-primary" onclick="pesquisarEndereco()" type="button" id="btnConsultar" name="button">Consultar</button>
         </div>
         <div class="divEndereco" id="divEndereco">
             <ul class="listaLabels">
@@ -34,7 +35,9 @@
                 <li><label>Estado: </label> <label id="txtEstado"></label></li>
                 <li><label>CEP: </label> <label id="txtCEP"></label></li>
             </ul>
+            <div id="map-canvas"></div>
         </div>
+
     </div>
 </body>
 
