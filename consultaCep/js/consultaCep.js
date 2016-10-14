@@ -1,6 +1,7 @@
 $(document).ready(function() {
     var map;
     var maker;
+    var local;
 
     $("#map-canvas").show();
     $("#divEndereco").hide();
@@ -29,6 +30,8 @@ $(document).ready(function() {
                 $("#txtCEP").text(result.code);
 
                 $("#divEndereco").show();
+
+                pesquisarEndereco(result.address + " " + result.city + " " + result.state);
             });
     });
 
@@ -50,13 +53,11 @@ $(document).ready(function() {
 
     google.maps.event.addDomListener(window, "load", initialize);
 
-    function pesquisarEndereco() {
-        var enderecoInput = document.getElementById('texCep').value;
-
+    function pesquisarEndereco(endereco) {
         var geocoder = new google.maps.Geocoder();
 
         geocoder.geocode({
-            address: map-canvas
+            address: endereco
         }, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 var myResult = results[0].geometry.location;
@@ -73,17 +74,15 @@ $(document).ready(function() {
     }
 
     function criarMarcador(latlng) {
-        if (marker != undefined && marker != '') {
-            marker.setMap(null);
-            marker = '';
-        }
+        //if (marker != undefined && marker != '') {
+        //    marker.setMap(null);
+        //    marker = '';
+        //}
 
         marker = new google.maps.Marker({
             map: map,
             position: latlng
         });
     }
-
-
 
 });

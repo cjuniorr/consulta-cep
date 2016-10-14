@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <title>Consulta de CEP</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
 
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <!-- <script src="js/consultaCEPCtrl.js" charset="utf-8"></script>-->
-    <script src="js/consultaCep.js" charset="utf-8"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script src="js/consultaCep.js" charset="utf-8"></script>
 </head>
 
 <body>
@@ -23,7 +20,7 @@
         <div class="divConsultar">
             <legend>Consultar CEP</legend>
             <!-- <form class="" id="form" action="index.html" method="post"> -->
-            <input type="text" id="texCep" value=""  placeholder="Digite o CEP...">
+            <input type="text" id="texCep" value="" placeholder="Digite o CEP...">
             <!--</form> -->
             <button class="btn btn-primary" onclick="pesquisarEndereco()" type="button" id="btnConsultar" name="button">Consultar</button>
         </div>
@@ -35,9 +32,12 @@
                 <li><label>Estado: </label> <label id="txtEstado"></label></li>
                 <li><label>CEP: </label> <label id="txtCEP"></label></li>
             </ul>
-            <div id="map-canvas"></div>
         </div>
+    </div>
 
+    <div class="mapa">
+        <div id="map-canvas"></div>
+    </div>
     </div>
 </body>
 

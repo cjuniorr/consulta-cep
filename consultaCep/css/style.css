@@ -11,10 +11,18 @@ li {
 }
 
 .jumbotron {
-  border-style: solid;
+    border-style: solid;
     margin-top: 50px;
     padding: 15px;
     border-radius: 10px;
+    border-width: thick;
+    border-color: rgb(34, 126, 200);
+}
+
+.mapa {
+    border-style: solid;
+    border-radius: 10px;
+    border-width: thick;
     border-color: rgb(34, 126, 200);
 }
 
@@ -26,4 +34,15 @@ li {
 
 .listaLabels {
     padding-left: 0px;
+}
+
+#map-canvas {
+    margin: 0;
+    padding: 0;
+    height: 400px;
+    max-width: none;
+}
+
+#map-canvas img {
+    max-width: none !important;
 }
